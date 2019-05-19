@@ -24,9 +24,9 @@ func letterCombinations(digits string) []string {
 	}
 	for _, d := range dbytes {
 		var appended []string
-		for _, c := range ar[(d - '1')] {
+		for idx := range ar[(d - '1')] {
 			for _, r := range ret {
-				appended = append(appended, r+string(c))
+				appended = append(appended, r+string())
 			}
 		}
 		ret = appended
